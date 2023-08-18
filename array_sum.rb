@@ -2,6 +2,11 @@ def sum_array(input_array)
   sum=input_array.sum
 end
 
-array = [1, 2, 3, 4, 5]
+array = []
+print "Введите числа, разделенные пробелами: "
+numbers = gets.chomp
+array = numbers.split.map(&:to_i)
+
 sum = sum_array(array)
+
 puts "Сумма чисел массива: #{sum}"
